@@ -2,7 +2,7 @@
 pipeline {
     agent any // Run on any available agent
 
-    // triggers {
+     triggers {
         cron('H/2 * * * *')
     }
 
