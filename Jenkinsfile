@@ -7,11 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('1. Checkout Code') {
-            steps {
-                git 'https://github.com/Sujalkahahai/jenkins_test.git'
-            }
-        }
+       stage('1. Checkout Code') {
+         steps {
+        // The fix is to explicitly tell Git which branch to use
+        git branch: 'main', url: 'https://github.com/Sujalkahahai/jenkins_test.git'
+    }
+}
 
         stage('2. Compile Java Code') {
             steps {
