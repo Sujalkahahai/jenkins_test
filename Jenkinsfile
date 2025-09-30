@@ -18,9 +18,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'javac HelloWorld.java'
+                        sh 'javac hello.java'
                     } else {
-                        bat 'javac HelloWorld.java'
+                        bat 'javac hello.java'
                     }
                 }
                 echo 'Java code compiled successfully!'
